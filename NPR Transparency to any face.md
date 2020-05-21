@@ -62,7 +62,7 @@ This is a mod, so in the mod folder it goes like any other mods.
 
  ![Step2.2](https://imgur.com/AfVeAdW.png)
 -	Export your model
--	Open the face’s .menu either with [CM3D2]mate←→txt Converter.exe or [CM3D2]menuEdit.exe
+-	Open the face’s .menu either with [CM3D2]menu←→txt Converter.exe or [CM3D2]menuEdit.exe
 I recommend the former as it’s easier to add and edit lines, just be careful with your structure.
 -	We want to add NPR specific shaders to each material of the face that need one. Note that GP01 compatible faces need more changes.
 -	Although you can go with the .mate included in sixima’s example I recommend you to copy them and rename them for yourself:

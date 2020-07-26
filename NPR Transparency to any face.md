@@ -13,8 +13,8 @@ There are two ways to go about this:
 ## Simple Method
 ### Needed:
 - COM3D2 (doesn’t work with CM)
-- NPR shader 0.6.0 or above
-https://ux.getuploader.com/sixima/download/18
+- NPR shader 0.8.0 or above
+https://ux.getuploader.com/sixima/download/26
 - Sixima’s stencil shader compatible faces
 https://ux.getuploader.com/sixima/download/15
 - COM3D2.AutoEraseOutline.Plugin disabled (both plugins are incompatible)

@@ -4,7 +4,8 @@ Don't be afraid of trying it's really easy, blender does almost all the work for
 
 ### What are shapekeys ?
 
-To make it simple they are instructions for the game to morph an item (be it clothes or body or anything)
+To make it simple they are instructions for the game to morph an item (be it clothes or body or anything) 
+
 For example breast sliders in game are shapekeys.
 You'll see later a "Basis" shapekey, it's the default state of your item, and shapekeys with names, they are the end result of the transofrmation action,
 everything in between is calculated by the game/blender.

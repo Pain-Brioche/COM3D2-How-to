@@ -10,7 +10,7 @@ For example breast sliders in game are shapekeys.
 You'll see later a "Basis" shapekey, it's the default state of your item, and shapekeys with names, they are the end result of the transformation action,
 everything in between is calculated by the game/blender.
 
-Didn't understood ? Well it doesn't really matter ^^'.
+Didn't understand ? Well it doesn't really matter ^^'.
 
 ### When do you need to transfer shapekeys ?
 

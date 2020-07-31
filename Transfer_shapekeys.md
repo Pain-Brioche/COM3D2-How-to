@@ -44,6 +44,7 @@ Ask Nocbot on discord to know how to install it (@Nocbot blender)
 ![Example](Pictures/skstransfer1.png)
 
 6.Make sure "Remove All Previous Keys" is selected
+
 7. Click Ok and wait, it can be long depending on your computer power the complexity of the model and the number of shapekeys
 8. Job done! Export your new model and load it in game to see the result.
 

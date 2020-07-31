@@ -1,4 +1,6 @@
-# How to Transfer Shapkeys 
+# How to Transfer Shapekeys
+
+![Example](Pictures/skstransferAlthea.png)
 
 Don't be afraid of trying it's really easy, blender does almost all the work for you.
 

@@ -7,8 +7,9 @@ Don't be afraid of trying it's really easy, blender does almost all the work for
 To make it simple they are instructions for the game to morph an item (be it clothes or body or anything) 
 
 For example breast sliders in game are shapekeys.
-You'll see later a "Basis" shapekey, it's the default state of your item, and shapekeys with names, they are the end result of the transofrmation action,
+You'll see later a "Basis" shapekey, it's the default state of your item, and shapekeys with names, they are the end result of the transformation action,
 everything in between is calculated by the game/blender.
+
 Didn't understood ? Well it doesn't really matter ^^'.
 
 ### When do you need to transfer shapekeys ?
@@ -29,7 +30,7 @@ Ask Nocbot on discord to know how to install it (@Nocbot blender)
 - We'll call Target the .model that will receive the shapekey
 - From here you have two choices:
 
-Transfering ALL shapekeys from Source to Target, you usually do this when transfering from body to clothes or fixing shapekeys
+#### Transfering ALL shapekeys from Source to Target, you usually do this when transfering from body to clothes or fixing shapekeys
 
 ![Example](Pictures/skstransfer0.png)
 
@@ -46,7 +47,7 @@ Transfering ALL shapekeys from Source to Target, you usually do this when transf
 7. Click Ok and wait, it can be long depending on your computer power the complexity of the model and the number of shapekeys
 8. Job done! Export your new model and load it in game to see the result.
 
-Transfering a few Shapekeys from Source to Target, Usually done if you don't want to delete previous shapekeys or only want to transfer a few.
+#### Transfering a few Shapekeys from Source to Target, Usually done if you don't want to delete previous shapekeys or only want to transfer a few.
 
 ![Example](Pictures/skstransfer2.png)
 

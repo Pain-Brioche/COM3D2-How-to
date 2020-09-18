@@ -40,7 +40,7 @@ Ask Nocbot on discord to know how to install it (@Nocbot blender)
 1. Select the object data Tab
 2. Right click on the Source
 3. While maintaining Shift, right click on the Target
-**The order is important! Soource must be highlighted in orange Target in yellow**
+**The order is important! Source must be highlighted in orange Target in yellow**
 4. Click on the small black down arrow
 5. Select Either quick or precision (you can go with precision but in many cases it doesn't make a difference other than being longer)
 

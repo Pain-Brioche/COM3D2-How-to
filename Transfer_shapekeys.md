@@ -30,6 +30,7 @@ Ask Nocbot on discord to know how to install it (@Nocbot blender)
 - Start by importing both model into blender (File -> import -> CM3D2 model (.model))
 - We'll call Source the .model that will give its shapekey
 - We'll call Target the .model that will receive the shapekey
+- **NEVER** move the models, keep them in place, moving them will result in deformation.
 - From here you have two choices:
 
 #### Transfering ALL shapekeys from Source to Target, you usually do this when transfering from body to clothes or fixing shapekeys

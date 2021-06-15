@@ -67,7 +67,7 @@ Doing so in advance and saving it will save you a lot of time if you plan to tra
 
 ![Example](Pictures/skstransferv2_3.png)
 
-1. Start by importing both model into blender (File -> import -> CM3D2 model (.model))
+1. Start by importing both models into blender (File -> import -> CM3D2 model (.model))
 2. Select the Source model and the object data properties tab
 3. Delete every shape keys you don't need (see above)
 **NEVER delete the "Basis" shape key**

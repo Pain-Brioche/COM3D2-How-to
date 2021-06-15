@@ -28,7 +28,7 @@ Ask Nocbot on discord to know how to install it (@Nocbot blender)
 
 ## Where to get those .model?
 
-AccEx can help your quickly find the correct name to look for.
+AccEx can help you quickly find the correct name to look for.
 Press F12 in edit mode, select the category corresponding and click the export button at the bottom, the .model name is written here.
 
 ![Example](Pictures/skstransferv2_0.png)

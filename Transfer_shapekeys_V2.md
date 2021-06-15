@@ -60,7 +60,7 @@ Doing so in advance and saving it will save you a lot of time if you plan to tra
    **NEVER delete the "Basis" shape key**
    Those are the game's basic shape keys and are already present in all items, they shouldn't be replaced without a good reason.
 4. Either export this new .model under a new name (ie: LOBody_Transfer_SKS.model) or save the .blend so it's faster to load and ready to use with any .model you'll import into.
-5. As a result you can always skip steps 2 to 4 bellow.
+5. As a result you can always skip steps 2 to 4 below.
 
 ### Transfering a few shape keys from Source to Target, Usually done if you don't want to delete previous shape keys or only want to transfer a few.
 ### *This is the recommended method, as it will ensure you do not replace manually crafted shape keys your model may have.*
@@ -69,12 +69,12 @@ Doing so in advance and saving it will save you a lot of time if you plan to tra
 
 1. Start by importing both models into blender (File -> import -> CM3D2 model (.model))
 2. Select the Source model and the object data properties tab
-3. Delete every shape keys you don't need (see above)
+3. Delete every shape key you don't need (see above)
 **NEVER delete the "Basis" shape key**
 4. Once you're left with Basis and the shape keys you want to transfer:
 5. Left click on the Source
 6. While maintaining Shift, left click on the Target
-**The order is important! Source must be highlighted in orange ang Target in yellow**
+**The order is important! Source must be highlighted in orange, Target in yellow**
 7. Click on the small down arrow
 8. Select Either quick or precision.
 
@@ -91,8 +91,8 @@ Doing so in advance and saving it will save you a lot of time if you plan to tra
 1. Start by importing both model into blender (File -> import -> CM3D2 model (.model))
 2. Select the object data properties Tab
 3. Right click on the Source
-4. While maintaining Shift, right click on the Target
-**The order is important! Source must be highlighted in orange Target in yellow**
+4. While maintaining Shift, left click on the Target
+**The order is important! Source must be highlighted in orange, Target in yellow**
 5. Click on the small down arrow
 6. Select Either quick or precision (you can go with precision but in many cases it doesn't make a difference other than being longer)
 7. Make sure "First delete all shape keys" is selected

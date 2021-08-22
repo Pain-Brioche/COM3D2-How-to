@@ -117,6 +117,7 @@ Shades of grey gives a transition like you would imagine.
 I don't see the point of this, have fun playing with it.  
 ```_MatcapMaskValue```  
 0 disables the mask 1 to enable it  
+Example of MatCapMask (Original Texture > MatCapMask > In game result (exagerated MatCap values)
 ![Example of a mpatcapmask](Pictures/matcapmask_example.png) 
 
 #### 5.```_EmissionMap``` / ```_EmissionColor``` / ```_EmissionValue``` / ```_EmissionHDRExposure``` / ```_EmissionPower``` / ```_EmissionCustomBlend```
@@ -139,7 +140,7 @@ Bellow 0 Emits inside the model
 ```_EmissionCustomBlend```  
 0 Emission is added to the ```_MainTex``` color  
 1 Compare ```_MainTex``` and leave the brighter color  
-Example of Emission map (UV map > Emission Map > In game result (with SC help)  
+Example of Emission map (UV map > Emission Map > In game result with SC help)  
 ![Example of a EmissionMap](Pictures/Emission_map_example.png)  
 
 #### 6.```_RimLightMap``` / ```_RimLightColor``` / ```_RimLightValue``` / ```_RimLightPower``` / ```_RimLightCustomBlend```
@@ -158,7 +159,7 @@ Bellow 0 Emits inside the model
  ```_RimLightCustomBlend```  
 0 Emission is added to the ```_MainTex``` color  
 1 Compare ```_MainTex``` and leave the brighter color  
-Example of RimLight map (Original Texture > RimLight Map > In game result (exagerated RimLight)
+Example of RimLight map (Original Texture > RimLight Map > In game result, exagerated RimLight)
 ![Example of a RimLightMap](Pictures/RimLightMap_example.png) 
 
 #### 7.```_PBRMap``` / ```_MetallicValue``` / ```_SmoothnessValue``` / ```_OcclusionValue``` / ```_ToonToDiffuseRateValue```

@@ -1,4 +1,4 @@
-# How to use NPR in your Mods
+# How to use NPR in your Mods (WIP)
 ## Requirements
 I will not cover elements common with the basic part of modding  
 As a result, you will need to know and understand, before proceeding;
@@ -170,6 +170,6 @@ For this map, textures's RBG channels will give NPR infos on how to handle light
 Red channel is the Metalic Map  
 Green channel is the Smoothness Map (inverted Roughness)  
 Blue channel is the Ambiant Occlusion Map  
-Example of a PBR map Red > Green > Blue > PBR Map  
+Example of a PBR map Red channel > Green > Blue > resulting PBR Map  
 This shouldn't be considered as a good map, and is only here as a rough example!
 ![Example of a PBRMap](Pictures/PBR_map_example.png) 

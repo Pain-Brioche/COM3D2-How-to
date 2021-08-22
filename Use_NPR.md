@@ -81,7 +81,7 @@ If your plan is only to add a matcap to your model, you can ditch everything tha
 ```_OutlineWidth```  
 They all work like you're used too.
 
-#### ```_NormalMap``` / ```_NormalValue```
+#### 1.```_NormalMap``` / ```_NormalValue```
 Normal Mapping is used to simulate asperities on a texture without making a more complex 3D mesh.  
 In COM NPR skins often use normal maps.  
 It's usually baked (rendered) from more complex version of your model, as such you cannot use a normal map from another model and hope to get a decent result.  
@@ -91,14 +91,16 @@ NPR uses the standard normal maps in purple/blue/green/pink shades.
 ```_NormalValue```  
 between 0 and 1 set the effect strength.
 
-#### ```_ParallaxShaderToggle``` / ```_ParallaxValue```
+#### 2.```_ParallaxShaderToggle``` / ```_ParallaxValue```
 Parallax allows to give depth to your texture, it's complementary to the normal map in a sense it gives detail to your object without changing your model. 
 This one uses the same texture as the ```_NormalMap``` but on the alpha chanel this time.
 ```_ParallaxShaderToggle```  
 0 to turn off 1 to turn on the parallax effect  
 ```_ParallaxValue```  
-Between 0 and 1 set the effect strength.
-#### ```_MatcapMap``` / ```_MatcapColor``` / ```_MatcapValue```
+Between 0 and 1 set the effect strength.  
+![Example of a parallax map](Pictures/parallax_map_example.png)  
+
+#### 3.```_MatcapMap``` / ```_MatcapColor``` / ```_MatcapValue```
 A.k.a the plastic effect...  
 This creates the illusion of a reflection on your object, making it in many cases glossy to the point of looking like molten plastic/latex
 Although nothing prevents your to use it in a more subtle way to mimic wetness for example.
@@ -107,16 +109,17 @@ Nice thing is you can use any matcap you can find on internet as long as they ar
 ```_MatcapColor``` changes the color of the MatCapMap texture.  
 ```_MatcapValue``` bewteen 0 and 1 sets the strength of the effect.
 
-#### ```_MatcapMask``` / ```_MatcapMaskColor``` / ```_MatcapMaskValue```
+#### 4.```_MatcapMask``` / ```_MatcapMaskColor``` / ```_MatcapMaskValue```
 Removes or tone down the ```_MatCapMat``` supperposed on the UV map.
 Parts painted in white will be affected by the MatCap whereas black will not.  
 Shades of grey gives a transition like you would imagine.  
 ```_MatcapMaskColor```  
 I don't see the point of this, have fun playing with it.  
 ```_MatcapMaskValue```  
-0 disables the mask 1 to enable it
+0 disables the mask 1 to enable it  
+![Example of a mpatcapmask](Pictures/matcapmask_example.png) 
 
-#### ```_EmissionMap``` / ```_EmissionColor``` / ```_EmissionValue``` / ```_EmissionHDRExposure``` / ```_EmissionPower``` / ```_EmissionCustomBlend```
+#### 5.```_EmissionMap``` / ```_EmissionColor``` / ```_EmissionValue``` / ```_EmissionHDRExposure``` / ```_EmissionPower``` / ```_EmissionCustomBlend```
 This does not require an emission shader.  
 Doesn't work if the global game light is set to 0  
 Emits light superposed on the UV map.  

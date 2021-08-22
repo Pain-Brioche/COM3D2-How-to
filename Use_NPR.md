@@ -4,8 +4,7 @@ I will not cover elements common with the basic part of modding
 As a result, you will need to know and understand, before proceeding;
 - How to reference a .mate inside a .menu
 - How to edit a .mate
-- What Hair/Trans/OutlineTex/CutoutAtC default shaders are
-- What a .tex is
+- What Hair/Trans/OutlineTex/CutoutAtC default shaders are and how to use them
 - For more advanced shader options you'll need to know what RGB and Alpha channels are
 
 This is an archive with all NPR's .mate templates translated for better understanding
@@ -32,6 +31,8 @@ If you downloaded the .mate template archive, you'll see that the freely editabl
 ■ Infos inside NPR .mate are edited in exactly the same way and with the same tools as classic .mate  
 ■ NPR has an UI that works almost in the same way as AccEx, simply click the NPR icon in your gear menu, and preview your changes before copying them in your .mate
 ■ I advise you to know in advance what shader you'll need
+■ Like for classic .mate you're only need to give info about what you want to change, leaving a field null or deleting it is a viable way of doing things
+■ All textures and maps are like for the main game in .tex format
 
 ## NPR Shader Types
 You'll notice soone enough that suffixes are logical and will be able to know which one you want on a glimpse
@@ -68,3 +69,28 @@ First shaders NPR came with, they are still compatible but you don't want to use
 
 ## Global NPR settings
 **Those settings are common to every NPR shader**
+
+I will repeat what I said in the basic: deleting a field you don't care about it perfectly fine, and it will help you reading your .mate easily.  
+If your plan is only to add a matcap to your model, you can ditch everything that isn't matcap related.
+- Texture
+```_MainTex``` ```_ToonRamp``` ```_ShadowTex``` ```_ShadowRateToon``` ```_OutlineTex```  ```_OutlineToonRamp```  
+- Color
+ ```_Color``` ```_ShadowColor``` ```_OutlineColor```
+- Float
+```_OutlineWidth```  
+They all work like you're used too.
+
+#### ```_NormalMap``` / ```_NormalValue```
+Normal Mapping is used to simulate asperities on a texture without making a more complex 3D mesh.  
+In COM NPR skins often use normal maps.  
+It's usually baked (rendered) from more complex version of your model, as such you cannot use a normal map from another model and hope to get a decent result.  
+NPR uses the standard normal maps in purple/blue/green/pink shades.  
+[More details and how to make yours in this video](https://www.youtube.com/watch?v=0r-cGjVKvGw)  
+![Example of a normal map](Pictures/normal_map_example.png)
+
+#### ```_MatcapMap``` / ```_MatcapColor``` / ```_MatcapValue```
+A.k.a the plastic effect...  
+This creates the illusion of a reflection on your object, making it in many cases glossy to the point of looking like molten plastic/latex
+Although nothing prevents your to use it in a more subtle way to mimic wetness for example.
+Nice thing is you can use any matcap you can find on internet as long as they are squared and looks like a sphere (on a 2D plane)
+![Example of matcap maps](Pictures/matcap_example.png)

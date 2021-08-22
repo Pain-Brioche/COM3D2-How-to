@@ -6,7 +6,7 @@ As a result, you will need to know and understand, before proceeding;
 - How to edit a .mate
 - What Hair/Trans/OutlineTex/CutoutAtC default shaders are and how to use them
 - What an UV map is (or how a texture is applied on a 3D mesh)
-- For more advanced shader options you'll need to know what RGB and Alpha channels are
+- For more advanced shader options you'll need to know what RGB and Alpha chanels are
 
 This is an archive with all NPR's .mate templates translated for better understanding
 ## The Basic of NPR
@@ -88,8 +88,16 @@ It's usually baked (rendered) from more complex version of your model, as such y
 NPR uses the standard normal maps in purple/blue/green/pink shades.  
 [More details and how to make yours in this video](https://www.youtube.com/watch?v=0r-cGjVKvGw)  
 ![Example of a normal map](Pictures/normal_map_example.png)  
-```_NormalValue``` between 0 and 1 set the effect strength.
+```_NormalValue```  
+between 0 and 1 set the effect strength.
 
+#### ```_ParallaxShaderToggle``` / ```_ParallaxValue```
+Parallax allows to give depth to your texture, it's complementary to the normal map in a sense it gives detail to your object without changing your model. 
+This one uses the same texture as the ```_NormalMap``` but on the alpha chanel this time.
+```_ParallaxShaderToggle```  
+0 to turn off 1 to turn on the parallax effect  
+```_ParallaxValue```  
+Between 0 and 1 set the effect strength.
 #### ```_MatcapMap``` / ```_MatcapColor``` / ```_MatcapValue```
 A.k.a the plastic effect...  
 This creates the illusion of a reflection on your object, making it in many cases glossy to the point of looking like molten plastic/latex
@@ -144,3 +152,11 @@ Bellow 0 Emits inside the model
 0 Emission is added to the ```_MainTex``` color  
 1 Compare ```_MainTex``` and leave the brighter color
 
+#### ```_PBRMap``` / ```_MetallicValue``` / ```_SmoothnessValue``` / ```_OcclusionValue``` / ```_ToonToDiffuseRateValue```
+Physically Based Rendering (thanks google).  
+One map for three things at once, aren't you lucky ?  
+I will enumarate what this does anyway, but let's just say that if you have the knowledge to use PBR you're way above my level  
+On this one, each RBG chanel of the texture will give NPR an info about how to handle light.  
+Red chanel is the Metalic Map  
+Green is the Smoothness Map (inverted Roughness)  
+Blue is the Ambiant Occlusion Map  

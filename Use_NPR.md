@@ -87,9 +87,9 @@ In COM NPR skins often use normal maps.
 It's usually baked (rendered) from more complex version of your model, as such you cannot use a normal map from another model and hope to get a decent result.  
 NPR uses the standard normal maps in purple/blue/green/pink shades.  
 [More details and how to make yours in this video](https://www.youtube.com/watch?v=0r-cGjVKvGw)  
-![Example of a normal map](Pictures/normal_map_example.png)  
 ```_NormalValue```  
-between 0 and 1 set the effect strength.
+between 0 and 1 set the effect strength.  
+![Example of a normal map](Pictures/normal_map_example.png)  
 
 #### 2.```_ParallaxShaderToggle``` / ```_ParallaxValue```
 Parallax allows to give depth to your texture, it's complementary to the normal map in a sense it gives detail to your object without changing your model. 
@@ -120,9 +120,11 @@ I don't see the point of this, have fun playing with it.
 ![Example of a mpatcapmask](Pictures/matcapmask_example.png) 
 
 #### 5.```_EmissionMap``` / ```_EmissionColor``` / ```_EmissionValue``` / ```_EmissionHDRExposure``` / ```_EmissionPower``` / ```_EmissionCustomBlend```
-This does not require an emission shader.  
+This does not require an emission shader unless you want some sort of animations on top of it. 
 Doesn't work if the global game light is set to 0  
 Emits light superposed on the UV map.  
+Only shines (pun intended) in low light settings and with SceneCapture help.  
+Strange behaviours whith large maps.  
 ```_EmissionColor```  
 Changes the ```_EmissionMap``` color, changing the light color as result , alpha change the blending ratio (see ```_EmissionCustomBlend```)
 ```_EmissionValue```  
@@ -134,16 +136,18 @@ Indice d'intensité:
 0 global  
 Above 0 Emits outside of the model  
 Bellow 0 Emits inside the model  
-```_EmissionCustomBlend```
+```_EmissionCustomBlend```  
 0 Emission is added to the ```_MainTex``` color  
-1 Compare ```_MainTex``` and leave the brighter color
+1 Compare ```_MainTex``` and leave the brighter color  
+Example of Emission map (UV map > Emission Map > In game result with SC help)  
+![Example of a EmissionMap](Pictures/Emission_map_example.png)  
 
-#### ```_RimLightMap``` / ```_RimLightColor``` / ```_RimLightValue``` / ```_RimLightPower``` / ```_RimLightCustomBlend```
+#### 6.```_RimLightMap``` / ```_RimLightColor``` / ```_RimLightValue``` / ```_RimLightPower``` / ```_RimLightCustomBlend```
 Replaces the classic RimLight from COM shaders.  
-Works pretty much the same as Emission above, but from RimLighting.  
-If you do not use it, default game RimLight will be used instead.  
+ ```_RimLightMap```  
+ Supperposed on the UV Map, allows to choose where the RimLight will be.  
  ```_RimLightColor```  
- Something to do about color of the Rim Light :p
+ Something to do about color of the RimLight :p
  ```_RimLightValue``` 
  RimLight strength, between 0 and 1, disabled at 0.  
  ```_RimLightPower```  
@@ -155,7 +159,7 @@ Bellow 0 Emits inside the model
 0 Emission is added to the ```_MainTex``` color  
 1 Compare ```_MainTex``` and leave the brighter color
 
-#### ```_PBRMap``` / ```_MetallicValue``` / ```_SmoothnessValue``` / ```_OcclusionValue``` / ```_ToonToDiffuseRateValue```
+#### 7.```_PBRMap``` / ```_MetallicValue``` / ```_SmoothnessValue``` / ```_OcclusionValue``` / ```_ToonToDiffuseRateValue```
 Physically Based Rendering (thanks google).  
 One map for three things at once, aren't you lucky ?  
 I will enumarate what this does anyway, but let's just say that if you have the knowledge to use PBR you're way above my level  

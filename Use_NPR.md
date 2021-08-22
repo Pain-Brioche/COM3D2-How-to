@@ -117,7 +117,7 @@ Shades of grey gives a transition like you would imagine.
 I don't see the point of this, have fun playing with it.  
 ```_MatcapMaskValue```  
 0 disables the mask 1 to enable it  
-Example of MatCapMask (Original Texture > MatCapMask > In game result (exagerated MatCap values)
+Example of MatCapMask (Original Texture > MatCapMask > In game result (exagerated MatCap values)  
 ![Example of a mpatcapmask](Pictures/matcapmask_example.png) 
 
 #### 5.```_EmissionMap``` / ```_EmissionColor``` / ```_EmissionValue``` / ```_EmissionHDRExposure``` / ```_EmissionPower``` / ```_EmissionCustomBlend```

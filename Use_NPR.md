@@ -155,7 +155,7 @@ Replaces the classic RimLight from COM shaders.
 0 global  
 Above 0 Emits outside of the model  
 Bellow 0 Emits inside the model  
- ```_RimLightCustomBlend```
+ ```_RimLightCustomBlend```  
 0 Emission is added to the ```_MainTex``` color  
 1 Compare ```_MainTex``` and leave the brighter color
 

@@ -115,9 +115,9 @@ Emits light superposed on the UV map.
 ```_EmissionColor```  
 Changes the ```_EmissionMap``` color, changing the light color as result , alpha change the blending ratio (see ```_EmissionCustomBlend```)
 ```_EmissionValue```  
-Emisison strength, between 0 and 1  
+Emisison strength, between 0 and 1, disabled at 0.  
 ```_EmissionHDRExposure```  
-Mimic HDR exposure, just consider it makes it even brighter, value between 0 and 3  
+Mimic HDR exposure, just consider it makes it even brighter, value between 0 and 3.  
 ```_EmissionPower```  
 Indice d'intensité:  
 0 global  
@@ -126,3 +126,21 @@ Bellow 0 Emits inside the model
 ```_EmissionCustomBlend```
 0 Emission is added to the ```_MainTex``` color  
 1 Compare ```_MainTex``` and leave the brighter color
+
+#### ```_RimLightMap``` / ```_RimLightColor``` / ```_RimLightValue``` / ```_RimLightPower``` / ```_RimLightCustomBlend```
+Replaces the classic RimLight from COM shaders.  
+Works pretty much the same as Emission above, but from RimLighting.  
+If you do not use it, default game RimLight will be used instead.  
+ ```_RimLightColor```  
+ Something to do about color of the Rim Light :p
+ ```_RimLightValue``` 
+ RimLight strength, between 0 and 1, disabled at 0.  
+ ```_RimLightPower```  
+ Indice d'intensité:  
+0 global  
+Above 0 Emits outside of the model  
+Bellow 0 Emits inside the model  
+ ```_RimLightCustomBlend```
+0 Emission is added to the ```_MainTex``` color  
+1 Compare ```_MainTex``` and leave the brighter color
+

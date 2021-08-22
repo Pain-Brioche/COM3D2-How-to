@@ -170,7 +170,7 @@ For this map, textures's RBG channels will give NPR infos on how to handle light
 Red channel is the Metalic Map, controlled by ```_MetallicValue```  
 Green channel is the Smoothness Map (inverted Roughness), controlled by ```_SmoothnessValue```  
 Blue channel is the Ambiant Occlusion Map, controlled by ```_OcclusionValue```  
-```_ToonToDiffuseRateValue``` is supposed to control the ratio between diffuse and PBR.
+```_ToonToDiffuseRateValue``` is supposed to control the ratio between diffuse and PBR.  
 Example of a PBR map Red channel > Green > Blue > resulting PBR Map  
 This shouldn't be considered as a good map, and is only here as a rough example!
 ![Example of a PBRMap](Pictures/PBR_map_example.png) 

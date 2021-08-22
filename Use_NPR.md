@@ -174,3 +174,6 @@ Blue channel is the Ambiant Occlusion Map, controlled by ```_OcclusionValue```
 Example of a PBR map Red channel > Green > Blue > resulting PBR Map  
 This shouldn't be considered as a good map, and is only here as a rough example!
 ![Example of a PBRMap](Pictures/PBR_map_example.png) 
+
+## Advanced NPR Shaders
+WIP

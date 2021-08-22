@@ -139,13 +139,13 @@ Bellow 0 Emits inside the model
 ```_EmissionCustomBlend```  
 0 Emission is added to the ```_MainTex``` color  
 1 Compare ```_MainTex``` and leave the brighter color  
-Example of Emission map (UV map > Emission Map > In game result with SC help)  
+Example of Emission map (UV map > Emission Map > In game result (with SC help)  
 ![Example of a EmissionMap](Pictures/Emission_map_example.png)  
 
 #### 6.```_RimLightMap``` / ```_RimLightColor``` / ```_RimLightValue``` / ```_RimLightPower``` / ```_RimLightCustomBlend```
 Replaces the classic RimLight from COM shaders.  
  ```_RimLightMap```  
- Supperposed on the UV Map, allows to choose where the RimLight will be.  
+ Supperposed on the UV Map, allows to choose where and if the RimLight will be displayed, a fully black map disable RimLight.  
  ```_RimLightColor```  
  Something to do about color of the RimLight :p
  ```_RimLightValue``` 
@@ -157,7 +157,9 @@ Above 0 Emits outside of the model
 Bellow 0 Emits inside the model  
  ```_RimLightCustomBlend```  
 0 Emission is added to the ```_MainTex``` color  
-1 Compare ```_MainTex``` and leave the brighter color
+1 Compare ```_MainTex``` and leave the brighter color  
+Example of RimLight map (Original Texture > RimLight Map > In game result (exagerated RimLight)
+![Example of a RimLightMap](Pictures/RimLightMap_example.png) 
 
 #### 7.```_PBRMap``` / ```_MetallicValue``` / ```_SmoothnessValue``` / ```_OcclusionValue``` / ```_ToonToDiffuseRateValue```
 Physically Based Rendering (thanks google).  

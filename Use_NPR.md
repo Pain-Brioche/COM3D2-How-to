@@ -167,9 +167,10 @@ Physically Based Rendering (thanks google).
 One map for three things at once, aren't you lucky ? (spoiler: No)  
 I will enumarate what this does anyway, but let's just say that if you have the knowledge to use PBR you're way above my level  
 For this map, textures's RBG channels will give NPR infos on how to handle light.  
-Red channel is the Metalic Map  
-Green channel is the Smoothness Map (inverted Roughness)  
-Blue channel is the Ambiant Occlusion Map  
+Red channel is the Metalic Map, controlled by ```_MetallicValue```  
+Green channel is the Smoothness Map (inverted Roughness), controlled by ```_SmoothnessValue```  
+Blue channel is the Ambiant Occlusion Map, controlled by ```_OcclusionValue```  
+```_ToonToDiffuseRateValue``` is supposed to control the ratio between diffuse and PBR.
 Example of a PBR map Red channel > Green > Blue > resulting PBR Map  
 This shouldn't be considered as a good map, and is only here as a rough example!
 ![Example of a PBRMap](Pictures/PBR_map_example.png) 

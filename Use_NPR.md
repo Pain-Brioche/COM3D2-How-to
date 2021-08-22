@@ -5,6 +5,7 @@ As a result, you will need to know and understand, before proceeding;
 - How to reference a .mate inside a .menu
 - How to edit a .mate
 - What Hair/Trans/OutlineTex/CutoutAtC default shaders are and how to use them
+- What an UV map is (or how a texture is applied on a 3D mesh)
 - For more advanced shader options you'll need to know what RGB and Alpha channels are
 
 This is an archive with all NPR's .mate templates translated for better understanding
@@ -86,11 +87,42 @@ In COM NPR skins often use normal maps.
 It's usually baked (rendered) from more complex version of your model, as such you cannot use a normal map from another model and hope to get a decent result.  
 NPR uses the standard normal maps in purple/blue/green/pink shades.  
 [More details and how to make yours in this video](https://www.youtube.com/watch?v=0r-cGjVKvGw)  
-![Example of a normal map](Pictures/normal_map_example.png)
+![Example of a normal map](Pictures/normal_map_example.png)  
+```_NormalValue``` between 0 and 1 set the effect strength.
 
 #### ```_MatcapMap``` / ```_MatcapColor``` / ```_MatcapValue```
 A.k.a the plastic effect...  
 This creates the illusion of a reflection on your object, making it in many cases glossy to the point of looking like molten plastic/latex
 Although nothing prevents your to use it in a more subtle way to mimic wetness for example.
 Nice thing is you can use any matcap you can find on internet as long as they are squared and looks like a sphere (on a 2D plane)
-![Example of matcap maps](Pictures/matcap_example.png)
+![Example of matcap maps](Pictures/matcap_example.png)  
+```_MatcapColor``` changes the color of the MatCapMap texture.  
+```_MatcapValue``` bewteen 0 and 1 sets the strength of the effect.
+
+#### ```_MatcapMask``` / ```_MatcapMaskColor``` / ```_MatcapMaskValue```
+Removes or tone down the ```_MatCapMat``` supperposed on the UV map.
+Parts painted in white will be affected by the MatCap whereas black will not.  
+Shades of grey gives a transition like you would imagine.  
+```_MatcapMaskColor```  
+I don't see the point of this, have fun playing with it.
+```_MatcapMaskValue```  
+0 disables the mask 1 to enable it
+
+#### ```_EmissionMap``` / ```_EmissionColor``` / ```_EmissionValue``` / ```_EmissionHDRExposure``` / ```_EmissionPower``` / ```_EmissionCustomBlend```
+This does not require an emission shader.  
+Doesn't work if the global game light is set to 0  
+Emits light superposed on the UV map.  
+```_EmissionColor```  
+Changes the ```_EmissionMap``` color, changing the light color as result , alpha change the blending ratio (see ```_EmissionCustomBlend```)
+```_EmissionValue```  
+Emisison strength, between 0 and 1  
+```_EmissionHDRExposure```  
+Mimic HDR exposure, just consider it makes it even brighter, value between 0 and 3  
+```_EmissionPower```  
+Indice d'intensité:  
+0 global  
+Above 0 Emits outside of the model  
+Bellow 0 Emits inside the model  
+```_EmissionCustomBlend```
+0 Emission is added to the ```_MainTex``` color  
+1 Compare ```_MainTex``` and leave the brighter color

@@ -164,9 +164,12 @@ Example of RimLight map (Original Texture > RimLight Map > In game result, exage
 
 #### 7.```_PBRMap``` / ```_MetallicValue``` / ```_SmoothnessValue``` / ```_OcclusionValue``` / ```_ToonToDiffuseRateValue```
 Physically Based Rendering (thanks google).  
-One map for three things at once, aren't you lucky ?  
+One map for three things at once, aren't you lucky ? (spoiler: No)  
 I will enumarate what this does anyway, but let's just say that if you have the knowledge to use PBR you're way above my level  
-On this one, each RBG chanel of the texture will give NPR an info about how to handle light.  
-Red chanel is the Metalic Map  
-Green is the Smoothness Map (inverted Roughness)  
-Blue is the Ambiant Occlusion Map  
+For this map, textures's RBG channels will give NPR infos on how to handle light.  
+Red channel is the Metalic Map  
+Green channel is the Smoothness Map (inverted Roughness)  
+Blue channel is the Ambiant Occlusion Map  
+Example of a PBR map Red > Green > Blue > PBR Map  
+This shouldn't be considered as a good map, and is only here as a rough example!
+![Example of a PBRMap](Pictures/PBR_map_example.png) 

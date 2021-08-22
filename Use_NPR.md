@@ -112,7 +112,7 @@ Removes or tone down the ```_MatCapMat``` supperposed on the UV map.
 Parts painted in white will be affected by the MatCap whereas black will not.  
 Shades of grey gives a transition like you would imagine.  
 ```_MatcapMaskColor```  
-I don't see the point of this, have fun playing with it.
+I don't see the point of this, have fun playing with it.  
 ```_MatcapMaskValue```  
 0 disables the mask 1 to enable it
 

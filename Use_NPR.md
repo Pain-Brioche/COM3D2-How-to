@@ -57,7 +57,7 @@ You'll notice soone enough that suffixes are logical and will be able to know wh
 
 #### NPR version of classic shaders
 I almost feel I don't need to explain those, they are your classic COM shaders but with added NPR settings (see bellow).  
-Probably the ones you'll use most often.
+Probably the ones you'll use most often.  
 ```_NPRMAT_NPRToonV2_```  
 ```_NPRMAT_NPRToonV2_OutlineTex_```  
 ```_NPRMAT_NPRToonV2_Hair_```  
@@ -150,7 +150,7 @@ Emisison strength, between 0 and 1, disabled at 0.
 ```_EmissionHDRExposure```  
 Mimic HDR exposure, just consider it makes it even brighter, value between 0 and 3.  
 ```_EmissionPower```  
-Indice d'intensité:  
+Intensity index:  
 0 global  
 Above 0 Emits outside of the model  
 Bellow 0 Emits inside the model  
@@ -169,7 +169,7 @@ Replaces the classic RimLight from COM shaders.
  ```_RimLightValue``` 
  RimLight strength, between 0 and 1, disabled at 0.  
  ```_RimLightPower```  
- Indice d'intensité:  
+ Intensity index:  
 0 global  
 Above 0 Emits outside of the model  
 Bellow 0 Emits inside the model  

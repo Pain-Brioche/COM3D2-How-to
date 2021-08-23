@@ -101,7 +101,7 @@ NPR uses the standard normal maps in purple/blue/green/pink shades.
 [More details and how to make yours in this video](https://www.youtube.com/watch?v=0r-cGjVKvGw)  
 ```_NormalValue```  
 between 0 and 1 set the effect strength.  
-![Example of a normal map](Pictures/normal_map_example.png)  
+![Example of a normal map](Pictures/NPR_Examples/normal_map_example.png)  
 
 #### 2.```_ParallaxShaderToggle``` / ```_ParallaxValue```
 Parallax allows to give depth to your texture, it's complementary to the normal map in a sense it gives detail to your object without changing your model. 
@@ -110,14 +110,14 @@ This one uses the same texture as the ```_NormalMap``` but on the alpha chanel t
 0 to turn off 1 to turn on the parallax effect  
 ```_ParallaxValue```  
 Between 0 and 1 set the effect strength.  
-![Example of a parallax map](Pictures/parallax_map_example.png)  
+![Example of a parallax map](Pictures/NPR_Examples/parallax_map_example.png)  
 
 #### 3.```_MatcapMap``` / ```_MatcapColor``` / ```_MatcapValue```
 A.k.a the plastic effect...  
 This creates the illusion of a reflection on your object, making it in many cases glossy to the point of looking like molten plastic/latex
 Although nothing prevents your to use it in a more subtle way to mimic wetness for example.
 Nice thing is you can use any matcap you can find on internet as long as they are squared and looks like a sphere (on a 2D plane)
-![Example of matcap maps](Pictures/matcap_example.png)  
+![Example of matcap maps](Pictures/NPR_Examples/matcap_example.png)  
 ```_MatcapColor``` changes the color of the MatCapMap texture.  
 ```_MatcapValue``` bewteen 0 and 1 sets the strength of the effect.
 
@@ -130,7 +130,7 @@ I don't see the point of this, have fun playing with it.
 ```_MatcapMaskValue```  
 0 disables the mask 1 to enable it  
 Example of MatCapMask (Original Texture > MatCapMask > In game result (exagerated MatCap values)  
-![Example of a mpatcapmask](Pictures/matcapmask_example.png) 
+![Example of a mpatcapmask](Pictures/NPR_Examples/matcapmask_example.png) 
 
 #### 5.```_EmissionMap``` / ```_EmissionColor``` / ```_EmissionValue``` / ```_EmissionHDRExposure``` / ```_EmissionPower``` / ```_EmissionCustomBlend```
 This does not require an emission shader unless you want some sort of animations on top of it. 
@@ -153,7 +153,7 @@ Bellow 0 Emits inside the model
 0 Emission is added to the ```_MainTex``` color  
 1 Compare ```_MainTex``` and leave the brighter color  
 Example of Emission map (UV map > Emission Map > In game result with SC help)  
-![Example of a EmissionMap](Pictures/Emission_map_example.png)  
+![Example of a EmissionMap](Pictures/NPR_Examples/Emission_map_example.png)  
 
 #### 6.```_RimLightMap``` / ```_RimLightColor``` / ```_RimLightValue``` / ```_RimLightPower``` / ```_RimLightCustomBlend```
 Replaces the classic RimLight from COM shaders.  
@@ -172,7 +172,7 @@ Bellow 0 Emits inside the model
 0 Emission is added to the ```_MainTex``` color  
 1 Compare ```_MainTex``` and leave the brighter color  
 Example of RimLight map (Original Texture > RimLight Map > In game result, exagerated RimLight)
-![Example of a RimLightMap](Pictures/RimLightMap_example.png) 
+![Example of a RimLightMap](Pictures/NPR_Examples/RimLightMap_example.png) 
 
 #### 7.```_PBRMap``` / ```_MetallicValue``` / ```_SmoothnessValue``` / ```_OcclusionValue``` / ```_ToonToDiffuseRateValue```
 Physically Based Rendering (thanks google).  
@@ -185,7 +185,7 @@ Blue channel is the Ambiant Occlusion Map, controlled by ```_OcclusionValue```
 ```_ToonToDiffuseRateValue``` is supposed to control the ratio between diffuse and PBR.  
 Example of a PBR map Red channel > Green > Blue > resulting PBR Map.  
 This shouldn't be considered as a good map, and is only here as a rough example!
-![Example of a PBRMap](Pictures/PBR_map_example.png) 
+![Example of a PBRMap](Pictures/NPR_Examples/PBR_map_example.png) 
 
 ## Advanced NPR Shaders
 
@@ -206,7 +206,7 @@ Speed of the toon change.
 ```_EmissionToonViewModeShaderToggle```  
 Combines the view vector with the EmissionToon  (I don't understand this one).  
 Example of Emission and Toon map (EmissionMap > First Toon > Second fancier Toon)
-![Example of a RimLightMap](Pictures/EmissivToon_example.png) 
+![Example of a RimLightMap](Pictures/NPR_Examples/EmissivToon_example.png) 
 
 **```_EmissionScrollMap```**
 This one is more tricky to use, it makes the assigned map scroll alongside the UV axis.  
@@ -218,8 +218,16 @@ Scrolling speed of the map on the X axis, can be negative.
 ```_EmissionUVScrollSpeed_Y```  
 Scrolling speed of the map on the Y axis, can be negative.  
 Example of Emission and EmissionScrollMap (EmissionMap > ScrollMap acting as a mask > In game result)
-![Example of a RimLightMap](Pictures/EmissionScrollMap_example.png) 
+![Example of a RimLightMap](Pictures/NPR_Examples/EmissionScrollMap_example.png) 
 
 #### 9. ```_NPRMAT_NPRToonV2_Fabric_``` (prototype)
-##### ```_FabricDiffuseValue```
-This shader helps rendering better cloth textures, it works with the [PBR map we saw above](https://twitter.com/sixima_punipuni)PBR map we saw above
+##### ```_FabricDiffuseValue``` / ```_MetallicValue``` / ```_SmoothnessValue```
+This shader helps rendering better cloth textures, it works with the [PBR map we saw above](https://github.com/Pain-Brioche/COM3D2-How-to/blob/master/Use_NPR.md#7_pbrmap--_metallicvalue--_smoothnessvalue--_occlusionvalue--_toontodiffuseratevalue).  
+```_FabricDiffuseValue```
+Correction factor to adjust the diffuse texture, You mostly want 0.  
+```_MetallicValue```  
+Use the Red channel of PBR Map, between 0 (matt, ie:cotton) to 1 (glossy, ie:silk).  
+```_SmoothnessValue```  
+Use the Green channel of PBR Map, Smoothness Map (inverted Roughness).  
+
+#### 10. 

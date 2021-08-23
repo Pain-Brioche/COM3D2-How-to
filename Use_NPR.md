@@ -252,9 +252,10 @@ As for PBR, this is not a well done map, it's only here for demonstration purpos
 
 ```_NPRMAT_NPRToonV2_UnlitReflection_``` Is, you guessed it, the same thing, but unaffected by lighting.  
 
-#### I don't want to!
+#### 11. ```_NPRMAT_NPRToon_StencilWrite_``` / ```_NPRMAT_NPRToon_StencilRead_```
+##### I don't want to!
 You asked for it...  
-##### 11. ```_NPRMAT_NPRToon_StencilWrite_``` / ```_NPRMAT_NPRToon_StencilRead_```  
+  
 Stencil is not One shader contrary to the other ones, but a collection of shaders working together.
 ```Write``` shaders and ```Read``` shaders
 ```Write``` shaders will write the infos of their assigned material in a buffer of some sort.

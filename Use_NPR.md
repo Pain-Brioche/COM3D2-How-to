@@ -29,11 +29,12 @@ If you downloaded the .mate template archive, you'll see that the freely editabl
 **Failure to abide by this simple rule will make this .mate ignored by the plugin and NPR effects not applied.**
   
   
-■ Infos inside NPR .mate are edited in exactly the same way and with the same tools as classic .mate  
-■ NPR has an UI that works almost in the same way as AccEx, simply click the NPR icon in your gear menu, and preview your changes before copying them in your .mate
-■ I advise you to know in advance what shader you'll need
-■ Like for classic .mate you're only need to give info about what you want to change, leaving a field null or deleting it is a viable way of doing things
-■ All textures and maps are like for the main game in .tex format
+■ Infos inside NPR .mate are edited in exactly the same way and with the same tools as classic .mate.  
+■ NPR has an UI that works almost in the same way as AccEx, simply click the NPR icon in your gear menu, and preview your changes before copying them in your .mate.  
+■ I advise you to know in advance what shader you'll need.  
+■ Like for classic .mate you're only need to give info about what you want to change, leaving a field null or deleting it is a viable way of doing things.  
+■ The original shader type doesn't matter, NPR will force its own and avoid any error. Although it's obviously best to use a NPR shader of the same type.  
+■ All textures and maps are like for the main game in .tex format.  
 
 ## NPR Shader Types
 You'll notice soone enough that suffixes are logical and will be able to know which one you want on a glimpse
@@ -176,4 +177,8 @@ This shouldn't be considered as a good map, and is only here as a rough example!
 ![Example of a PBRMap](Pictures/PBR_map_example.png) 
 
 ## Advanced NPR Shaders
-WIP
+
+#### 8. ```_NPRMAT_NPRToonV2_Emissiv_```
+#### ```_EmissionToon``` / ```_EmissionScrollMap``` / ```_EmissionToonShaderToggle``` / ```_EmissionToonViewModeShaderToggle``` / ```_EmissionToonScrollSpeed``` / ```_EmissionUVScrollShaderToggle``` / ```_EmissionUVScrollSpeed_X``` / ```_EmissionUVScrollSpeed_Y```
+
+All this comes in complement of an Emission Map, so [please refer to the EmissionMap settings first](https://www.youtube.com/watch?v=0r-cGjVKvGw)  

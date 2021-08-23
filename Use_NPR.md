@@ -1,4 +1,4 @@
-# How to use NPR in your Mods (WIP)
+# How to use NPR in your Mods
 
 ## Disclaimer
 NPR is a plugin Made By [@Sixima_punipuni](https://twitter.com/sixima_punipuni).
@@ -8,6 +8,10 @@ Many info you'll find down here are the result of testing NPR settings and readi
 I do not have any prior knowledge on texture work (in fact I'm pretty bad at it), feel free to comment or correct me when I'm wrong (on Discord).
 
 ## Useful resources
+[NPR_Examples](https://mega.nz/file/KB5CxZaJ#GLF5MZdsdISOXrT79aIh24XqWhjx6vTk10yF55fuahc)  
+This is a set of in-game examples I made to illustrate the guide.  
+I strongly suggest you download them to see the effect in game, many shaders need to be seen in situation so understand the use.  
+With it you'll find all NPR .mate template ready to use and translated in english.
 
 ## Requirements
 I will not cover elements common with the basic part of modding  
@@ -290,3 +294,9 @@ Less(0) | Greater(1) | LEqual(2) | GEqual(3) | Equal(4) | NotEqual(5) | Always(6
 ```_BlendOp``` / ```_SrcBlend``` / ```_DstBlend``` / ```_BlendOp2``` / ```_SrcBlend2``` / ```_DstBlend2```  
 Something to do with blending light....  
 [Here have fun](https://docs.unity3d.com/2018.4/Documentation/Manual/SL-Blend.html)
+
+
+### Notes
+I'll add any information I find useful as they come.  
+Again, don't hesitate to point me to errors or changes needed  
+![Baguette Muku](Pictures/MukuSalute.jpg)

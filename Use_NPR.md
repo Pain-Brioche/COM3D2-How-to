@@ -206,7 +206,7 @@ Speed of the toon change.
 ```_EmissionToonViewModeShaderToggle```  
 Combines the view vector with the EmissionToon  (I don't understand this one).  
 Example of Emission and Toon map (EmissionMap > First Toon > Second fancier Toon)
-![Example of a RimLightMap](Pictures/NPR_Examples/EmissivToon_example.png) 
+![Example of a EmissivToon](Pictures/NPR_Examples/EmissivToon_example.png) 
 
 **```_EmissionScrollMap```**
 This one is more tricky to use, it makes the assigned map scroll alongside the UV axis.  
@@ -218,7 +218,7 @@ Scrolling speed of the map on the X axis, can be negative.
 ```_EmissionUVScrollSpeed_Y```  
 Scrolling speed of the map on the Y axis, can be negative.  
 Example of Emission and EmissionScrollMap (EmissionMap > ScrollMap acting as a mask > In game result)
-![Example of a RimLightMap](Pictures/NPR_Examples/EmissionScrollMap_example.png) 
+![Example of a EmissionScrollMap](Pictures/NPR_Examples/EmissionScrollMap_example.png) 
 
 #### 9. ```_NPRMAT_NPRToonV2_Fabric_``` (prototype)
 ##### ```_FabricDiffuseValue``` / ```_MetallicValue``` / ```_SmoothnessValue```
@@ -229,5 +229,18 @@ Correction factor to adjust the diffuse texture, You mostly want 0.
 Use the Red channel of PBR Map, between 0 (matt, ie:cotton) to 1 (glossy, ie:silk).  
 ```_SmoothnessValue```  
 Use the Green channel of PBR Map, Smoothness Map (inverted Roughness).  
+Example of PBR map used in Fabric Shader (Original Texture > PBR Map > In game result)
+As for PBR, this is not a well done map, it's only here for demonstration purposes.  
+![Example of a Fabric](Pictures/NPR_Examples/FabricShader_example.png) 
 
-#### 10. 
+#### 10. ```_NPRMAT_NPRToonV2_Reflection_``` & ```_NPRMAT_NPRToonV2_UnlitReflection_```
+##### ```_MetallicValue``` / ```_SmoothnessValue```
+Who wants chrome Muku ?  
+With this shader you can reflect in (kinda) real-time the environement on selected parts.  
+Computers lacking power may struggle with this one.  
+```_MetallicValue```  
+Use the Red channel of PBR Map, between 0 (matt, ie:cotton) to 1 (glossy, ie:silk).  
+```_SmoothnessValue```  
+Use the Green channel of PBR Map, Smoothness Map (inverted Roughness).  
+As for PBR, this is not a well done map, it's only here for demonstration purposes.   
+![Example of a Reflection](Pictures/NPR_Examples/ReflectionShader_example.png) 

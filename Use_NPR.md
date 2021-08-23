@@ -256,9 +256,9 @@ As for PBR, this is not a well done map, it's only here for demonstration purpos
 ##### I don't want to!
 You asked for it...  
   
-Stencil is not One shader contrary to the other ones, but a collection of shaders working together.
-```Write``` shaders and ```Read``` shaders
-```Write``` shaders will write the infos of their assigned material in a buffer of some sort.
+Stencil is not One shader contrary to the other ones, but a collection of shaders working together.  
+```Write``` shaders and ```Read``` shaders  
+```Write``` shaders will write the infos of their assigned material in a buffer of some sort.  
 ```Read``` shaders will cast said info on itself.  
 The obvious example, would be the NPR hair transparency effect, which is as I said a misnomer since if you followed you know now that this isn't transparency at all, but a texture cast on an other.  
 ![Example of a stencil shader in action](Pictures/NPR_Examples/Stencil_Shader_example.png)  

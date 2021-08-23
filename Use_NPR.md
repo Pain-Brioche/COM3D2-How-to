@@ -1,4 +1,14 @@
 # How to use NPR in your Mods (WIP)
+
+## Disclaimer
+NPR is a plugin Made By [@Sixima_punipuni](https://twitter.com/sixima_punipuni).
+Although not exempt of some odd quirck, the plugin has the advantage of being entirely transparent for the end user, leaving us modder to do the work.  
+To this effect, he made a great work adding those new shader in a similar way we're used to for classic mods.  
+Many info you'll find down here are the result of testing NPR settings and reading the few lines of documentations shipped with the Plugin.  
+I do not have any prior knowledge on texture work (in fact I'm pretty bad at it), feel free to comment or correct me when I'm wrong (on Discord).
+
+## Useful resources
+
 ## Requirements
 I will not cover elements common with the basic part of modding  
 As a result, you will need to know and understand, before proceeding;
@@ -9,6 +19,7 @@ As a result, you will need to know and understand, before proceeding;
 - For more advanced shader options you'll need to know what RGB and Alpha chanels are
 
 This is an archive with all NPR's .mate templates translated for better understanding
+
 ## The Basic of NPR
 ■ Adding any NPR .mate on a COM model isn't much different than using .mate in a classic situation.  
 - Prepare your .model with material neatly sorted  
@@ -208,3 +219,7 @@ Scrolling speed of the map on the X axis, can be negative.
 Scrolling speed of the map on the Y axis, can be negative.  
 Example of Emission and EmissionScrollMap (EmissionMap > ScrollMap acting as a mask > In game result)
 ![Example of a RimLightMap](Pictures/EmissionScrollMap_example.png) 
+
+#### 9. ```_NPRMAT_NPRToonV2_Fabric_``` (prototype)
+##### ```_FabricDiffuseValue```
+This shader helps rendering better cloth textures, it works with the [PBR map we saw above](https://twitter.com/sixima_punipuni)PBR map we saw above

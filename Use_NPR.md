@@ -180,7 +180,7 @@ This shouldn't be considered as a good map, and is only here as a rough example!
 
 #### 8. ```_NPRMAT_NPRToonV2_Emissiv_```
 ##### ```_EmissionToon``` /  ```_EmissionToonShaderToggle``` / ```_EmissionToonScrollSpeed``` / ```_EmissionToonViewModeShaderToggle```
-##### ```_EmissionScrollMap``` /```_EmissionUVScrollShaderToggle``` / ```_EmissionUVScrollSpeed_X``` / ```_EmissionUVScrollSpeed_Y```
+##### ```_EmissionScrollMap``` / ```_EmissionUVScrollShaderToggle``` / ```_EmissionUVScrollSpeed_X``` / ```_EmissionUVScrollSpeed_Y```
 
 All this comes in complement of an Emission Map, so [please refer to the EmissionMap settings first](https://github.com/Pain-Brioche/COM3D2-How-to/blob/master/Use_NPR.md#5_emissionmap--_emissioncolor--_emissionvalue--_emissionhdrexposure--_emissionpower--_emissioncustomblend).  
 This Shader has two distinct functions that can be used alone or together.
@@ -196,3 +196,15 @@ Speed of the toon change.
 Combines the view vector with the EmissionToon  (I don't understand this one).  
 Example of Emission and Toon map (EmissionMap > First Toon > Second fancier Toon)
 ![Example of a RimLightMap](Pictures/EmissivToon_example.png) 
+
+**```_EmissionScrollMap```**
+This one is more tricky to use, it makes the assigned map scroll alongside the UV axis.  
+I find it to be best used as a rolling mask.  
+```_EmissionUVScrollShaderToggle```
+Toggle the effect on (1) or off (0).  
+```_EmissionUVScrollSpeed_X```  
+Scrolling speed of the map on the X axis, can be negative.  
+```_EmissionUVScrollSpeed_Y```  
+Scrolling speed of the map on the Y axis, can be negative.  
+Example of Emission and EmissionScrollMap (EmissionMap > ScrollMap acting as a mask > In game result)
+![Example of a RimLightMap](Pictures/EmissionScrollMap_example.png) 

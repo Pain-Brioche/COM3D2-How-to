@@ -246,4 +246,47 @@ Use the Green channel of PBR Map, Smoothness Map (inverted Roughness).
 As for PBR, this is not a well done map, it's only here for demonstration purposes.   
 ![Example of a Reflection](Pictures/NPR_Examples/ReflectionShader_example.png)  
 
-```_NPRMAT_NPRToonV2_UnlitReflection_``` Is you guessed it the same thing, but unaffected by lighting.  
+```_NPRMAT_NPRToonV2_UnlitReflection_``` Is, you guessed it, the same thing, but unaffected by lighting.  
+
+#### I don't want to!
+You asked for it...  
+##### 11. ```_NPRMAT_NPRToon_StencilWrite_``` / ```_NPRMAT_NPRToon_StencilRead_```  
+Stencil is not One shader contrary to the other ones, but a collection of shaders working together.
+```Write``` shaders and ```Read``` shaders
+```Write``` shaders will write the infos of their assigned material in a buffer of some sort.
+```Read``` shaders will cast said info on itself.  
+The obvious example, would be the NPR hair transparency effect, which is as I said a misnomer since if you followed you know now that this isn't transparency at all, but a texture cast on an other.  
+![Example of a stencil shader in action](Pictures/NPR_Examples/Stencil_Shader_example.png)  
+Those shaders have clearly been made for this single purpose.
+You can choose to use them in any project of yours using your imagination.  
+Contrary to what you may think after my comedy above, the basic of stencil is pretty simple  
+In each of them you have a ```_StencilID```
+```Write``` and ```Read``` shaders with the same ```_StencilID``` will interract with each other, one casting the info sent by the other.  
+What makes it complicated is that every Stencil shader is a ```_Trans``` type shader, this means a meticulous use of .pmat to get what you want, as well as some NPR specific Transparent shader settings I didn't talk about until now.  
+
+#### 12. Transparent & CutOut shaders
+Better say it now, I'm totally lost on those ones.
+And NPR doc is very sparse for those.
+##### This is valid for every ```_Trans``` variation of the shaders we talked about above, including Stencil.
+```_BrightnessToAlpha```  
+Uses Brightness to determine transparency.  
+```_ShadowCutoff```  
+?  
+```_Culling```  
+Controls which side of the mesh is not drawn.  
+Back (0) | Front (1) | Off (3)  
+Back Don’t render polygons that are facing away from the viewer (default).  
+Front Don’t render polygons that are facing towards the viewer. Used for turning objects inside-out.  
+Off Disables culling - all faces are drawn. Used for special effects.  
+```_AlphaToMask```  
+At Which point alpha is considered transparent for CutOut (remember CutOut doesn't do semi-transparent textures)  
+```_ZWrite```  
+Writes depth. On(1) Off(0)  
+```_ZTest``` 
+How should depth testing be performed. Default is LEqual (draw objects in from or at the distance as existing objects; hide objects behind them).  
+Less(0) | Greater(1) | LEqual(2) | GEqual(3) | Equal(4) | NotEqual(5) | Always(6)  
+
+##### Stencil Shaders only
+```_BlendOp``` / ```_SrcBlend``` / ```_DstBlend``` / ```_BlendOp2``` / ```_SrcBlend2``` / ```_DstBlend2```  
+Something to do with blending light....  
+[Here have fun](https://docs.unity3d.com/2018.4/Documentation/Manual/SL-Blend.html)

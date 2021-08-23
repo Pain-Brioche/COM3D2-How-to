@@ -172,13 +172,27 @@ Red channel is the Metalic Map, controlled by ```_MetallicValue```
 Green channel is the Smoothness Map (inverted Roughness), controlled by ```_SmoothnessValue```  
 Blue channel is the Ambiant Occlusion Map, controlled by ```_OcclusionValue```  
 ```_ToonToDiffuseRateValue``` is supposed to control the ratio between diffuse and PBR.  
-Example of a PBR map Red channel > Green > Blue > resulting PBR Map  
+Example of a PBR map Red channel > Green > Blue > resulting PBR Map.  
 This shouldn't be considered as a good map, and is only here as a rough example!
 ![Example of a PBRMap](Pictures/PBR_map_example.png) 
 
 ## Advanced NPR Shaders
 
 #### 8. ```_NPRMAT_NPRToonV2_Emissiv_```
-#### ```_EmissionToon``` / ```_EmissionScrollMap``` / ```_EmissionToonShaderToggle``` / ```_EmissionToonViewModeShaderToggle``` / ```_EmissionToonScrollSpeed``` / ```_EmissionUVScrollShaderToggle``` / ```_EmissionUVScrollSpeed_X``` / ```_EmissionUVScrollSpeed_Y```
+##### ```_EmissionToon``` /  ```_EmissionToonShaderToggle``` / ```_EmissionToonScrollSpeed``` / ```_EmissionToonViewModeShaderToggle```
+##### ```_EmissionScrollMap``` /```_EmissionUVScrollShaderToggle``` / ```_EmissionUVScrollSpeed_X``` / ```_EmissionUVScrollSpeed_Y```
 
-All this comes in complement of an Emission Map, so [please refer to the EmissionMap settings first](https://www.youtube.com/watch?v=0r-cGjVKvGw)  
+All this comes in complement of an Emission Map, so [please refer to the EmissionMap settings first](https://github.com/Pain-Brioche/COM3D2-How-to/blob/master/Use_NPR.md#5_emissionmap--_emissioncolor--_emissionvalue--_emissionhdrexposure--_emissionpower--_emissioncustomblend).  
+This Shader has two distinct functions that can be used alone or together.
+**```_EmissionToon```**
+A simple toon to make your emission map color and/or intensity change over time, depending if you use a color toon or a black and white one.  
+Unless you want a stromboscopic effect, avoid sharp color change on this one.
+Blending mode is multiplicative.  
+```_EmissionToonShaderToggle```  
+Toggle the effect on (1) or off (0).  
+```_EmissionToonScrollSpeed```  
+Speed of the toon change.  
+```_EmissionToonViewModeShaderToggle```  
+Combines the view vector with the EmissionToon  (I don't understand this one).  
+Example of Emission and Toon map (EmissionMap > First Toon > Second fancier Toon)
+![Example of a RimLightMap](Pictures/EmissivToon_example.png) 

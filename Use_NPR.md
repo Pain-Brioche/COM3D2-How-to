@@ -46,6 +46,7 @@ If you downloaded the .mate template archive, you'll see that the freely editabl
 ■ Like for classic .mate you're only need to give info about what you want to change, leaving a field null or deleting it is a viable way of doing things.  
 ■ The original shader type doesn't matter, NPR will force its own and avoid any error. Although it's obviously best to use a NPR shader of the same type.  
 ■ All textures and maps are like for the main game in .tex format.  
+■ Many of the examples bellow have exagerated settings to demonstrate the effect, NPR is best used to add details and with carefuly selected settings.  
 
 ## NPR Shader Types
 You'll notice soone enough that suffixes are logical and will be able to know which one you want on a glimpse
@@ -243,4 +244,6 @@ Use the Red channel of PBR Map, between 0 (matt, ie:cotton) to 1 (glossy, ie:sil
 ```_SmoothnessValue```  
 Use the Green channel of PBR Map, Smoothness Map (inverted Roughness).  
 As for PBR, this is not a well done map, it's only here for demonstration purposes.   
-![Example of a Reflection](Pictures/NPR_Examples/ReflectionShader_example.png) 
+![Example of a Reflection](Pictures/NPR_Examples/ReflectionShader_example.png)  
+
+```_NPRMAT_NPRToonV2_UnlitReflection_``` Is you guessed it the same thing, but unaffected by lighting.  
